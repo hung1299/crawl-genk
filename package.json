@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "server": "nodemon index.js"
+    "server": "nodemon -r node_modules/dotenv/config index.js"
   },
   "author": "Hung",
   "license": "ISC",
@@ -16,7 +16,7 @@
     "puppeteer": "^5.2.1"
   },
   "devDependencies": {
-    "config": "^3.3.1",
+    "dotenv": "^8.2.0",
     "nodemon": "^2.0.4"
   }
 }
