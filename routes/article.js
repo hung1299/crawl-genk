@@ -14,6 +14,10 @@ router.get('/', async (req, res) => {
       const articles = await Article.find({}).skip(skip).limit(limit);
 
       return res.send(articles);
+    } else if (skip === 0 && limit) {
+      const articles = await Article.find({}).limit(limit);
+
+      return res.send(articles);
     } else if (sort) {
       const articles = await Article.find({}).sort({ createdAt: sort });
 
