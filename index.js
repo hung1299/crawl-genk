@@ -9,7 +9,7 @@ app.use(express.json());
 app.use('/api/articles', articleRoute);
 
 app.get('/', (req, res) => {
-  res.redirect('/api/articles');
+  res.redirect('/api/articles?sort_by=-1');
 });
 
 const PORT = process.env.PORT || 3000;
