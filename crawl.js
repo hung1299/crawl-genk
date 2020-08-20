@@ -42,7 +42,7 @@ const crawl = async () => {
 };
 
 const job = new cron.CronJob({
-  cronTime: '0 0 */6 * * *',
+  cronTime: '0 */1 * * * *',
   onTick: function () {
     console.log('Cron job running');
     crawl();
