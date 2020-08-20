@@ -42,10 +42,10 @@ const crawl = async () => {
 };
 
 const job = new cron.CronJob({
-  cronTime: '0 */1 * * * *',
-  onTick: function () {
-    console.log('Cron job running');
-    crawl();
+  cronTime: '0 */2 * * * *',
+  onTick: async function () {
+    await crawl();
+    console.log('Cron job done');
   },
   start: true,
   timeZone: 'Asia/Ho_Chi_Minh',
